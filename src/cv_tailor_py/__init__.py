@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from cv-tailor-py!")
+"""cv-tailor-py: Python port of cv-tailor."""
