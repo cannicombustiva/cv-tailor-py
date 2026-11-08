@@ -1,0 +1,17 @@
+[
+  {
+    "id": "senior-frontend",
+    "jobDescription": "Senior Frontend Engineer. You will lead the web app built with React, TypeScript and Next.js. We expect solid testing with Jest and experience with CI/CD pipelines. Nice to have: accessibility.",
+    "requiredSkills": ["React", "TypeScript", "Next.js", "Jest", "CI/CD"]
+  },
+  {
+    "id": "frontend-graphql",
+    "jobDescription": "Frontend Engineer. Build product features with React and TypeScript. Strong GraphQL experience is required. Nice to have: Next.js.",
+    "requiredSkills": ["React", "TypeScript", "GraphQL"]
+  },
+  {
+    "id": "fullstack-node",
+    "jobDescription": "Full-stack Engineer. Design REST APIs with Node.js and TypeScript, own CI/CD, collaborate with frontend teams using React.",
+    "requiredSkills": ["Node.js", "REST APIs", "TypeScript", "CI/CD"]
+  }
+]

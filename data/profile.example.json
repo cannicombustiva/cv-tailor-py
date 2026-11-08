@@ -1,0 +1,36 @@
+{
+  "name": "Example Candidate",
+  "email": "name@example.com",
+  "location": "City, Country",
+  "summaryFacts": [
+    "6 years of experience building web applications",
+    "Focus on React and TypeScript front ends",
+    "Works fully remote"
+  ],
+  "skills": ["React", "TypeScript", "Next.js", "Node.js", "REST APIs", "Jest", "CI/CD", "Accessibility"],
+  "roles": [
+    {
+      "company": "Company A",
+      "title": "Senior Frontend Engineer",
+      "start": "Jan 2022",
+      "end": "Present",
+      "achievements": [
+        { "id": "a1", "text": "Built a design system in React and TypeScript used by four product teams", "skills": ["React", "TypeScript"] },
+        { "id": "a2", "text": "Migrated a legacy app to Next.js, cutting page load time", "skills": ["Next.js", "React"] },
+        { "id": "a3", "text": "Introduced Jest unit tests and a CI/CD pipeline for the web app", "skills": ["Jest", "CI/CD"] },
+        { "id": "a4", "text": "Improved accessibility of checkout flows to meet WCAG guidelines", "skills": ["Accessibility", "React"] }
+      ]
+    },
+    {
+      "company": "Company B",
+      "title": "Frontend Developer",
+      "start": "Mar 2019",
+      "end": "Dec 2021",
+      "achievements": [
+        { "id": "b1", "text": "Developed REST API integrations with Node.js services", "skills": ["Node.js", "REST APIs"] },
+        { "id": "b2", "text": "Maintained a React component library with Jest tests", "skills": ["React", "Jest"] }
+      ]
+    }
+  ],
+  "education": [{ "school": "University X", "degree": "BSc Computer Science", "year": "2018" }]
+}
