@@ -1,0 +1,8 @@
+[
+  {"id": "empty-required", "cv": "## Summary\nhello", "requiredSkills": []},
+  {"id": "trailing-period", "cv": "## Skills\nShipped with Next.js.\n## Summary\n## Experience\n## Education", "requiredSkills": ["Next.js", "Node.js"]},
+  {"id": "symbols", "cv": "## skills \nC#, C++ and CI/CD (GitHub Actions); REST-APIs", "requiredSkills": ["C#", "C++", "CI/CD", "REST APIs", "Go"]},
+  {"id": "substring-not-word", "cv": "ReactJS and TypeScripts", "requiredSkills": ["React", "TypeScript"]},
+  {"id": "case-and-spacing", "cv": "  ## Summary\n##Experience\n## SKILLS\n## Education\nnode.JS   rest\tapis", "requiredSkills": ["Node.js", "REST APIs"]},
+  {"id": "trailing-newline", "cv": "uses go.\n", "requiredSkills": ["go"]}
+]

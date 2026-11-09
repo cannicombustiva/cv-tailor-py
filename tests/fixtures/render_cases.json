@@ -1,0 +1,47 @@
+[
+  {
+    "id": "senior-frontend",
+    "jd": {
+      "role": "Senior Frontend Engineer",
+      "seniority": "Senior",
+      "requiredSkills": ["React", "TypeScript", "Next.js", "Jest", "CI/CD"],
+      "niceToHave": ["accessibility"]
+    },
+    "rewritten": {
+      "summary": "Frontend engineer with 6 years of experience building web applications. Focused on React and TypeScript front ends.",
+      "bullets": {
+        "a1": "Built a React and TypeScript design system adopted by four product teams",
+        "a3": "Introduced Jest unit tests and a CI/CD pipeline for the web app"
+      }
+    }
+  },
+  {
+    "id": "frontend-graphql",
+    "jd": {
+      "role": "Frontend Engineer",
+      "seniority": "",
+      "requiredSkills": ["React", "TypeScript", "GraphQL"],
+      "niceToHave": ["Next.js"]
+    },
+    "rewritten": {
+      "summary": "Frontend engineer focused on React and TypeScript.",
+      "bullets": {}
+    }
+  },
+  {
+    "id": "fullstack-node",
+    "jd": {
+      "role": "Full-stack Engineer",
+      "seniority": "Mid",
+      "requiredSkills": ["Node.js", "REST APIs", "TypeScript", "CI/CD"],
+      "niceToHave": []
+    },
+    "rewritten": {
+      "summary": "Web engineer with 6 years of experience. Works fully remote.",
+      "bullets": {
+        "b1": "Developed REST API integrations with Node.js services",
+        "a3": "Introduced a CI/CD pipeline and Jest unit tests for the web app"
+      }
+    }
+  }
+]

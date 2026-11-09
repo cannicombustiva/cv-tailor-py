@@ -1,0 +1,85 @@
+{
+  "_source": "Generated from cv-tailor (TypeScript) render + runAtsChecks. Do not edit by hand.",
+  "render": {
+    "senior-frontend": {
+      "cv": "# Example Candidate\nname@example.com | City, Country\n\n## Summary\nFrontend engineer with 6 years of experience building web applications. Focused on React and TypeScript front ends.\n\n## Experience\n### Senior Frontend Engineer, Company A (Jan 2022 - Present)\n- Built a React and TypeScript design system adopted by four product teams\n- Migrated a legacy app to Next.js, cutting page load time\n- Introduced Jest unit tests and a CI/CD pipeline for the web app\n- Improved accessibility of checkout flows to meet WCAG guidelines\n\n### Frontend Developer, Company B (Mar 2019 - Dec 2021)\n- Developed REST API integrations with Node.js services\n- Maintained a React component library with Jest tests\n\n## Skills\nReact, TypeScript, Next.js, Jest, CI/CD, Node.js, REST APIs, Accessibility\n\n## Education\nBSc Computer Science, University X (2018)",
+      "bullets": 6,
+      "cvChars": 833,
+      "ats": {
+        "keywordCoverage": 1,
+        "missingSkills": [],
+        "hasStandardHeadings": true,
+        "lineCount": 22
+      }
+    },
+    "frontend-graphql": {
+      "cv": "# Example Candidate\nname@example.com | City, Country\n\n## Summary\nFrontend engineer focused on React and TypeScript.\n\n## Experience\n### Senior Frontend Engineer, Company A (Jan 2022 - Present)\n- Built a design system in React and TypeScript used by four product teams\n- Migrated a legacy app to Next.js, cutting page load time\n- Introduced Jest unit tests and a CI/CD pipeline for the web app\n- Improved accessibility of checkout flows to meet WCAG guidelines\n\n### Frontend Developer, Company B (Mar 2019 - Dec 2021)\n- Developed REST API integrations with Node.js services\n- Maintained a React component library with Jest tests\n\n## Skills\nReact, TypeScript, Next.js, Node.js, REST APIs, Jest, CI/CD, Accessibility\n\n## Education\nBSc Computer Science, University X (2018)",
+      "bullets": 6,
+      "cvChars": 768,
+      "ats": {
+        "keywordCoverage": 0.6666666666666667,
+        "missingSkills": [
+          "GraphQL"
+        ],
+        "hasStandardHeadings": true,
+        "lineCount": 22
+      }
+    },
+    "fullstack-node": {
+      "cv": "# Example Candidate\nname@example.com | City, Country\n\n## Summary\nWeb engineer with 6 years of experience. Works fully remote.\n\n## Experience\n### Senior Frontend Engineer, Company A (Jan 2022 - Present)\n- Built a design system in React and TypeScript used by four product teams\n- Migrated a legacy app to Next.js, cutting page load time\n- Introduced a CI/CD pipeline and Jest unit tests for the web app\n- Improved accessibility of checkout flows to meet WCAG guidelines\n\n### Frontend Developer, Company B (Mar 2019 - Dec 2021)\n- Developed REST API integrations with Node.js services\n- Maintained a React component library with Jest tests\n\n## Skills\nTypeScript, Node.js, REST APIs, CI/CD, React, Next.js, Jest, Accessibility\n\n## Education\nBSc Computer Science, University X (2018)",
+      "bullets": 6,
+      "cvChars": 778,
+      "ats": {
+        "keywordCoverage": 1,
+        "missingSkills": [],
+        "hasStandardHeadings": true,
+        "lineCount": 22
+      }
+    }
+  },
+  "ats": {
+    "empty-required": {
+      "keywordCoverage": 1,
+      "missingSkills": [],
+      "hasStandardHeadings": false,
+      "lineCount": 2
+    },
+    "trailing-period": {
+      "keywordCoverage": 0.5,
+      "missingSkills": [
+        "Node.js"
+      ],
+      "hasStandardHeadings": true,
+      "lineCount": 5
+    },
+    "symbols": {
+      "keywordCoverage": 0.8,
+      "missingSkills": [
+        "Go"
+      ],
+      "hasStandardHeadings": false,
+      "lineCount": 2
+    },
+    "substring-not-word": {
+      "keywordCoverage": 0,
+      "missingSkills": [
+        "React",
+        "TypeScript"
+      ],
+      "hasStandardHeadings": false,
+      "lineCount": 1
+    },
+    "case-and-spacing": {
+      "keywordCoverage": 1,
+      "missingSkills": [],
+      "hasStandardHeadings": false,
+      "lineCount": 5
+    },
+    "trailing-newline": {
+      "keywordCoverage": 1,
+      "missingSkills": [],
+      "hasStandardHeadings": false,
+      "lineCount": 2
+    }
+  }
+}

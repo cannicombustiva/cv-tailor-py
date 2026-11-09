@@ -1,6 +1,7 @@
 """Pydantic v2 models for the profile and job boundaries.
 
 Field names are snake_case in Python; JSON uses camelCase (matching the TS version).
+Serialization uses the camelCase aliases by default, so Braintrust spans match the TS shape.
 """
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -12,6 +13,7 @@ class _Model(BaseModel):
         alias_generator=to_camel,
         validate_by_name=True,
         validate_by_alias=True,
+        serialize_by_alias=True,
         extra="forbid",
         frozen=True,
     )
@@ -51,3 +53,29 @@ class JobSpec(_Model):
     id: str = Field(min_length=1)
     job_description: str = Field(min_length=1)
     required_skills: list[str] = Field(default_factory=list)
+
+
+class ParsedJD(_Model):
+    """Structured output of the parse_jd step (TS: ParsedJD).
+
+    No defaults: every field is required so the OpenAI strict JSON schema matches exactly.
+    """
+
+    role: str
+    seniority: str
+    required_skills: list[str]
+    nice_to_have: list[str]
+
+
+class Rewritten(_Model):
+    """Output of the rewrite_bullets step: summary plus bullet text keyed by achievement id."""
+
+    summary: str
+    bullets: dict[str, str]
+
+
+class AtsReport(_Model):
+    keyword_coverage: float
+    missing_skills: list[str]
+    has_standard_headings: bool
+    line_count: int
