@@ -63,3 +63,26 @@ Format: what I thought, what it is, TypeScript equivalent, source.
   imported. Runs code only in the first case. Not needed here thanks to `[project.scripts]`.
 - TS: `import.meta.main` (Deno), `require.main === module` (Node).
 - Source: https://docs.python.org/3/library/__main__.html
+
+### @traced (Braintrust)
+- Thought: a Braintrust log named after the function.
+- Is: a decorator that records a span for every call (input, output, duration, errors),
+  nested under the parent span, so the trace shows the pipeline step by step.
+  The span name defaults to the function name.
+- TS: wrapTraced(fn).
+
+### Decorators
+- Is: `@something` above a function wraps it in another function that adds behaviour
+  without changing its code.
+- Source: https://docs.python.org/3/glossary.html#term-decorator
+
+### Mocking OpenAI in tests
+- Thought: a fake client created inside a fake_openai function.
+- Is: a real OpenAI client wrapped by wrap_openai, with a test API key and an httpx
+  MockTransport. The transport intercepts every HTTP request and returns a canned JSON
+  response, so no network call leaves the machine. monkeypatch swaps the client used by
+  the code for this fake one during the test only; pytest restores it afterwards.
+- Why: the test covers the real path (request building, Braintrust wrapper, parsing into
+  JobSpec), not just a stubbed function.
+- Sources: https://www.python-httpx.org/advanced/transports/
+  https://docs.pytest.org/en/stable/how-to/monkeypatch.html
