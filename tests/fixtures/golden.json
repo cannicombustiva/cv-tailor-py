@@ -1,5 +1,5 @@
 {
-  "_source": "Generated from cv-tailor (TypeScript) render + runAtsChecks. Do not edit by hand.",
+  "_source": "Generated from cv-tailor (TypeScript) render + runAtsChecks + matchProfile. Do not edit by hand.",
   "render": {
     "senior-frontend": {
       "cv": "# Example Candidate\nname@example.com | City, Country\n\n## Summary\nFrontend engineer with 6 years of experience building web applications. Focused on React and TypeScript front ends.\n\n## Experience\n### Senior Frontend Engineer, Company A (Jan 2022 - Present)\n- Built a React and TypeScript design system adopted by four product teams\n- Migrated a legacy app to Next.js, cutting page load time\n- Introduced Jest unit tests and a CI/CD pipeline for the web app\n- Improved accessibility of checkout flows to meet WCAG guidelines\n\n### Frontend Developer, Company B (Mar 2019 - Dec 2021)\n- Developed REST API integrations with Node.js services\n- Maintained a React component library with Jest tests\n\n## Skills\nReact, TypeScript, Next.js, Jest, CI/CD, Node.js, REST APIs, Accessibility\n\n## Education\nBSc Computer Science, University X (2018)",
@@ -35,6 +35,293 @@
         "hasStandardHeadings": true,
         "lineCount": 22
       }
+    }
+  },
+  "match": {
+    "example-senior-frontend": {
+      "roles": [
+        {
+          "company": "Company A",
+          "title": "Senior Frontend Engineer",
+          "start": "Jan 2022",
+          "end": "Present",
+          "achievements": [
+            {
+              "id": "a1",
+              "text": "Built a design system in React and TypeScript used by four product teams",
+              "skills": [
+                "React",
+                "TypeScript"
+              ]
+            },
+            {
+              "id": "a2",
+              "text": "Migrated a legacy app to Next.js, cutting page load time",
+              "skills": [
+                "Next.js",
+                "React"
+              ]
+            },
+            {
+              "id": "a3",
+              "text": "Introduced Jest unit tests and a CI/CD pipeline for the web app",
+              "skills": [
+                "Jest",
+                "CI/CD"
+              ]
+            },
+            {
+              "id": "a4",
+              "text": "Improved accessibility of checkout flows to meet WCAG guidelines",
+              "skills": [
+                "Accessibility",
+                "React"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Company B",
+          "title": "Frontend Developer",
+          "start": "Mar 2019",
+          "end": "Dec 2021",
+          "achievements": [
+            {
+              "id": "b2",
+              "text": "Maintained a React component library with Jest tests",
+              "skills": [
+                "React",
+                "Jest"
+              ]
+            },
+            {
+              "id": "b1",
+              "text": "Developed REST API integrations with Node.js services",
+              "skills": [
+                "Node.js",
+                "REST APIs"
+              ]
+            }
+          ]
+        }
+      ],
+      "rewriteInput": "{\"target\":{\"role\":\"Senior Frontend Engineer\",\"seniority\":\"Senior\",\"requiredSkills\":[\"React\",\"TypeScript\",\"Next.js\",\"Jest\",\"CI/CD\"],\"niceToHave\":[\"accessibility\"]},\"facts\":{\"summaryFacts\":[\"6 years of experience building web applications\",\"Focus on React and TypeScript front ends\",\"Works fully remote\"],\"achievements\":[{\"id\":\"a1\",\"text\":\"Built a design system in React and TypeScript used by four product teams\"},{\"id\":\"a2\",\"text\":\"Migrated a legacy app to Next.js, cutting page load time\"},{\"id\":\"a3\",\"text\":\"Introduced Jest unit tests and a CI/CD pipeline for the web app\"},{\"id\":\"a4\",\"text\":\"Improved accessibility of checkout flows to meet WCAG guidelines\"},{\"id\":\"b2\",\"text\":\"Maintained a React component library with Jest tests\"},{\"id\":\"b1\",\"text\":\"Developed REST API integrations with Node.js services\"}]}}"
+    },
+    "example-fullstack-node": {
+      "roles": [
+        {
+          "company": "Company A",
+          "title": "Senior Frontend Engineer",
+          "start": "Jan 2022",
+          "end": "Present",
+          "achievements": [
+            {
+              "id": "a1",
+              "text": "Built a design system in React and TypeScript used by four product teams",
+              "skills": [
+                "React",
+                "TypeScript"
+              ]
+            },
+            {
+              "id": "a2",
+              "text": "Migrated a legacy app to Next.js, cutting page load time",
+              "skills": [
+                "Next.js",
+                "React"
+              ]
+            },
+            {
+              "id": "a3",
+              "text": "Introduced Jest unit tests and a CI/CD pipeline for the web app",
+              "skills": [
+                "Jest",
+                "CI/CD"
+              ]
+            },
+            {
+              "id": "a4",
+              "text": "Improved accessibility of checkout flows to meet WCAG guidelines",
+              "skills": [
+                "Accessibility",
+                "React"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Company B",
+          "title": "Frontend Developer",
+          "start": "Mar 2019",
+          "end": "Dec 2021",
+          "achievements": [
+            {
+              "id": "b1",
+              "text": "Developed REST API integrations with Node.js services",
+              "skills": [
+                "Node.js",
+                "REST APIs"
+              ]
+            },
+            {
+              "id": "b2",
+              "text": "Maintained a React component library with Jest tests",
+              "skills": [
+                "React",
+                "Jest"
+              ]
+            }
+          ]
+        }
+      ],
+      "rewriteInput": "{\"target\":{\"role\":\"Full-stack Engineer\",\"seniority\":\"\",\"requiredSkills\":[\"Node.js\",\"TypeScript\",\"REST APIs\",\"CI/CD\"],\"niceToHave\":[\"React\"]},\"facts\":{\"summaryFacts\":[\"6 years of experience building web applications\",\"Focus on React and TypeScript front ends\",\"Works fully remote\"],\"achievements\":[{\"id\":\"a1\",\"text\":\"Built a design system in React and TypeScript used by four product teams\"},{\"id\":\"a2\",\"text\":\"Migrated a legacy app to Next.js, cutting page load time\"},{\"id\":\"a3\",\"text\":\"Introduced Jest unit tests and a CI/CD pipeline for the web app\"},{\"id\":\"a4\",\"text\":\"Improved accessibility of checkout flows to meet WCAG guidelines\"},{\"id\":\"b1\",\"text\":\"Developed REST API integrations with Node.js services\"},{\"id\":\"b2\",\"text\":\"Maintained a React component library with Jest tests\"}]}}"
+    },
+    "example-no-overlap": {
+      "roles": [
+        {
+          "company": "Company A",
+          "title": "Senior Frontend Engineer",
+          "start": "Jan 2022",
+          "end": "Present",
+          "achievements": [
+            {
+              "id": "a1",
+              "text": "Built a design system in React and TypeScript used by four product teams",
+              "skills": [
+                "React",
+                "TypeScript"
+              ]
+            },
+            {
+              "id": "a2",
+              "text": "Migrated a legacy app to Next.js, cutting page load time",
+              "skills": [
+                "Next.js",
+                "React"
+              ]
+            },
+            {
+              "id": "a3",
+              "text": "Introduced Jest unit tests and a CI/CD pipeline for the web app",
+              "skills": [
+                "Jest",
+                "CI/CD"
+              ]
+            },
+            {
+              "id": "a4",
+              "text": "Improved accessibility of checkout flows to meet WCAG guidelines",
+              "skills": [
+                "Accessibility",
+                "React"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Company B",
+          "title": "Frontend Developer",
+          "start": "Mar 2019",
+          "end": "Dec 2021",
+          "achievements": [
+            {
+              "id": "b1",
+              "text": "Developed REST API integrations with Node.js services",
+              "skills": [
+                "Node.js",
+                "REST APIs"
+              ]
+            },
+            {
+              "id": "b2",
+              "text": "Maintained a React component library with Jest tests",
+              "skills": [
+                "React",
+                "Jest"
+              ]
+            }
+          ]
+        }
+      ],
+      "rewriteInput": "{\"target\":{\"role\":\"Data Engineer\",\"seniority\":\"\",\"requiredSkills\":[\"Spark\"],\"niceToHave\":[]},\"facts\":{\"summaryFacts\":[\"6 years of experience building web applications\",\"Focus on React and TypeScript front ends\",\"Works fully remote\"],\"achievements\":[{\"id\":\"a1\",\"text\":\"Built a design system in React and TypeScript used by four product teams\"},{\"id\":\"a2\",\"text\":\"Migrated a legacy app to Next.js, cutting page load time\"},{\"id\":\"a3\",\"text\":\"Introduced Jest unit tests and a CI/CD pipeline for the web app\"},{\"id\":\"a4\",\"text\":\"Improved accessibility of checkout flows to meet WCAG guidelines\"},{\"id\":\"b1\",\"text\":\"Developed REST API integrations with Node.js services\"},{\"id\":\"b2\",\"text\":\"Maintained a React component library with Jest tests\"}]}}"
+    },
+    "tiebreak": {
+      "roles": [
+        {
+          "company": "Company T",
+          "title": "Engineer",
+          "start": "2020",
+          "end": "Present",
+          "achievements": [
+            {
+              "id": "t2",
+              "text": "Two matches",
+              "skills": [
+                "React",
+                "TypeScript"
+              ]
+            },
+            {
+              "id": "t5",
+              "text": "Two matches, later",
+              "skills": [
+                "TYPESCRIPT",
+                "go"
+              ]
+            },
+            {
+              "id": "t1",
+              "text": "One match, first",
+              "skills": [
+                "react"
+              ]
+            },
+            {
+              "id": "t3",
+              "text": "One match, second",
+              "skills": [
+                "Go"
+              ]
+            },
+            {
+              "id": "t6",
+              "text": "One match, third",
+              "skills": [
+                "TypeScript"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Company Z",
+          "title": "Intern",
+          "start": "2019",
+          "end": "2020",
+          "achievements": [
+            {
+              "id": "z2",
+              "text": "Duplicate skill counted twice",
+              "skills": [
+                "React",
+                "react"
+              ]
+            },
+            {
+              "id": "z1",
+              "text": "No skills at all",
+              "skills": []
+            }
+          ]
+        },
+        {
+          "company": "Company E",
+          "title": "Empty",
+          "start": "2018",
+          "end": "2019",
+          "achievements": []
+        }
+      ],
+      "rewriteInput": "{\"target\":{\"role\":\"Engineer\",\"seniority\":\"\",\"requiredSkills\":[\"React\",\"typescript\"],\"niceToHave\":[\"GO\"]},\"facts\":{\"summaryFacts\":[\"Fact one\"],\"achievements\":[{\"id\":\"t2\",\"text\":\"Two matches\"},{\"id\":\"t5\",\"text\":\"Two matches, later\"},{\"id\":\"t1\",\"text\":\"One match, first\"},{\"id\":\"t3\",\"text\":\"One match, second\"},{\"id\":\"t6\",\"text\":\"One match, third\"},{\"id\":\"z2\",\"text\":\"Duplicate skill counted twice\"},{\"id\":\"z1\",\"text\":\"No skills at all\"}]}}"
     }
   },
   "ats": {

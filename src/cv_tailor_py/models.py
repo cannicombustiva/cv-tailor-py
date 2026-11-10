@@ -74,6 +74,25 @@ class Rewritten(_Model):
     bullets: dict[str, str]
 
 
+class RewrittenBullet(_Model):
+    id: str
+    text: str
+
+
+class RewriteOutput(_Model):
+    """What the LLM returns for rewrite_bullets (wire shape of Rewritten).
+
+    OpenAI strict structured outputs require `additionalProperties: false` on every object,
+    so a `dict[str, str]` map cannot be expressed; bullets come back as a list of {id, text}.
+    """
+
+    summary: str
+    bullets: list[RewrittenBullet]
+
+    def to_rewritten(self) -> Rewritten:
+        return Rewritten(summary=self.summary, bullets={b.id: b.text for b in self.bullets})
+
+
 class AtsReport(_Model):
     keyword_coverage: float
     missing_skills: list[str]
