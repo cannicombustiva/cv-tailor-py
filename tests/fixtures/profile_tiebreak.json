@@ -1,0 +1,42 @@
+{
+  "name": "Tie Break",
+  "email": "tie@example.com",
+  "location": "Nowhere",
+  "summaryFacts": ["Fact one"],
+  "skills": ["React", "TypeScript", "Go"],
+  "roles": [
+    {
+      "company": "Company T",
+      "title": "Engineer",
+      "start": "2020",
+      "end": "Present",
+      "achievements": [
+        { "id": "t1", "text": "One match, first", "skills": ["react"] },
+        { "id": "t2", "text": "Two matches", "skills": ["React", "TypeScript"] },
+        { "id": "t3", "text": "One match, second", "skills": ["Go"] },
+        { "id": "t4", "text": "No match", "skills": ["Cobol"] },
+        { "id": "t5", "text": "Two matches, later", "skills": ["TYPESCRIPT", "go"] },
+        { "id": "t6", "text": "One match, third", "skills": ["TypeScript"] },
+        { "id": "t7", "text": "One match, fourth (cut)", "skills": ["React"] }
+      ]
+    },
+    {
+      "company": "Company Z",
+      "title": "Intern",
+      "start": "2019",
+      "end": "2020",
+      "achievements": [
+        { "id": "z1", "text": "No skills at all", "skills": [] },
+        { "id": "z2", "text": "Duplicate skill counted twice", "skills": ["React", "react"] }
+      ]
+    },
+    {
+      "company": "Company E",
+      "title": "Empty",
+      "start": "2018",
+      "end": "2019",
+      "achievements": []
+    }
+  ],
+  "education": []
+}

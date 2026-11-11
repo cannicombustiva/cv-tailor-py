@@ -1,0 +1,37 @@
+[
+  {
+    "id": "example-senior-frontend",
+    "profile": "data/profile.example.json",
+    "jd": {
+      "role": "Senior Frontend Engineer",
+      "seniority": "Senior",
+      "requiredSkills": ["React", "TypeScript", "Next.js", "Jest", "CI/CD"],
+      "niceToHave": ["accessibility"]
+    }
+  },
+  {
+    "id": "example-fullstack-node",
+    "profile": "data/profile.example.json",
+    "jd": {
+      "role": "Full-stack Engineer",
+      "seniority": "",
+      "requiredSkills": ["Node.js", "TypeScript", "REST APIs", "CI/CD"],
+      "niceToHave": ["React"]
+    }
+  },
+  {
+    "id": "example-no-overlap",
+    "profile": "data/profile.example.json",
+    "jd": { "role": "Data Engineer", "seniority": "", "requiredSkills": ["Spark"], "niceToHave": [] }
+  },
+  {
+    "id": "tiebreak",
+    "profile": "tests/fixtures/profile_tiebreak.json",
+    "jd": {
+      "role": "Engineer",
+      "seniority": "",
+      "requiredSkills": ["React", "typescript"],
+      "niceToHave": ["GO"]
+    }
+  }
+]
