@@ -121,3 +121,35 @@ def test_rewrite_bullets_logs_function_and_llm_spans(fake_openai: FakeOpenAI, sp
     llm_spans = [s for s in logged if s["span_attributes"]["type"] == "llm"]
     assert len(llm_spans) == 1
     assert step["span_id"] in llm_spans[0]["span_parents"]
+
+
+def test_rewrite_sends_only_matched_achievements_and_keys_bullets_by_id(
+    fake_openai: FakeOpenAI,
+) -> None:
+    profile, roles, jd = _setup()
+    kept = [a for r in roles for a in r.achievements]
+    kept_ids = {a.id for a in kept}
+    discarded = [a for r in profile.roles for a in r.achievements if a.id not in kept_ids]
+    assert discarded, "fixture must make match_profile drop something"
+    answer = {
+        "summary": "Engineer with one fact.",
+        "bullets": [{"id": a.id, "text": f"Rewrote {a.id}"} for a in kept[:3]],
+    }
+    requests = _reply(fake_openai, answer)
+
+    out = rewrite_bullets(profile, roles, jd)
+
+    # (1) The LLM sees exactly the achievements match_profile kept, in order, none discarded.
+    (body,) = requests
+    user = body["messages"][1]["content"]
+    sent = json.loads(user)["facts"]["achievements"]
+    assert sent == [{"id": a.id, "text": a.text} for a in kept]
+    for a in discarded:
+        assert a.id not in {s["id"] for s in sent}
+        assert a.text not in user
+
+    # (2) Bullets come back keyed by id, built from the mocked answer.
+    assert out == Rewritten(
+        summary="Engineer with one fact.",
+        bullets={a.id: f"Rewrote {a.id}" for a in kept[:3]},
+    )

@@ -21,6 +21,16 @@ def spans() -> Iterator[Any]:
     logger._state.reset_parent_state()
 
 
+@pytest.fixture(autouse=True)
+def _no_real_openai(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Fail fast if a test reaches the real OpenAI client. fake_openai overrides this."""
+
+    def fail() -> OpenAI:
+        raise RuntimeError("test hit the real OpenAI client; use the fake_openai fixture")
+
+    monkeypatch.setattr(llm, "get_client", fail)
+
+
 def _completion(message: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": "chatcmpl-test",

@@ -78,3 +78,8 @@ def test_model_defaults_to_gpt_5_mini(monkeypatch: pytest.MonkeyPatch) -> None:
     assert importlib.reload(llm).MODEL == "gpt-x"
     monkeypatch.delenv("CV_MODEL")
     importlib.reload(llm)
+
+
+def test_llm_step_without_fake_openai_is_blocked() -> None:
+    with pytest.raises(RuntimeError, match="real OpenAI client"):
+        parse_jd(JD_TEXT)
